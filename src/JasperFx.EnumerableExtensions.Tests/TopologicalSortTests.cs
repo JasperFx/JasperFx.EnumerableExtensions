@@ -1,3 +1,4 @@
+using Shouldly;
 using Xunit;
 
 namespace JasperFx.EnumerableExtensions.Tests
@@ -19,8 +20,8 @@ namespace JasperFx.EnumerableExtensions.Tests
                 {7, new[] {6}},
                 {2, new[] {1}}
             };
-
-            dependencies.Keys.TopologicalSort(x => dependencies[x]).ToArray().ShouldBe(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9});
+            
+            dependencies.Keys.TopologicalSort(x => dependencies[x], true).ToArray().ShouldBe(new[] {1, 2, 3, 4, 5, 6, 7, 8, 9});
         }
 
         [Fact]

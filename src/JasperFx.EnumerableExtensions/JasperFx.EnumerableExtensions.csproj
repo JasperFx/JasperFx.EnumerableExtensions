@@ -5,6 +5,20 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
+
+        <Description>Reflection helpers</Description>
+        <Version>0.9.2</Version>
+        <Authors>Jeremy D. Miller</Authors>
+        <AssemblyName>JasperFx.EnumerableExtensions</AssemblyName>
+        <PackageId>JasperFx.EnumerableExtensions</PackageId>
+        <PackageProjectUrl>https://github.com/JasperFX/JasperFx.EnumerableExtensions</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/JasperFX/JasperFx.EnumerableExtensions/blob/master/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://github.com/JasperFx/oakton/blob/master/documentation/content/images/title.png?raw=true</PackageIconUrl>
+        <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+        <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+        <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+
     </PropertyGroup>
 
 </Project>

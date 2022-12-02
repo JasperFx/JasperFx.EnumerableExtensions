@@ -1,6 +1,7 @@
 using Shouldly;
 using Xunit;
 using JasperFx.EnumerableExtensions;
+using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
 namespace JasperFx.EnumerableExtensions.Tests
 {

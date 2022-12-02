@@ -6,7 +6,7 @@ namespace JasperFx.EnumerableExtensions
     /// <summary>
     /// Taken directly from Marten: https://github.com/JasperFx/marten/blob/2f18d09fa2034cbc647f48a74bbf3bbb8ea51116/src/Marten/Util/EnumerableExtensions.cs
     /// </summary>
-    internal static class EnumerableExtensions
+    public static class EnumerableExtensions
     {
         // TODO -- this needs to go, use the patched version from Lamar
 
@@ -27,6 +27,12 @@ namespace JasperFx.EnumerableExtensions
             }
 
             return -1;
+        }
+
+        public static IEnumerable<T> TopologicalSort<T>(this IEnumerable<T> source,
+            Func<T, IEnumerable<T>> getDependencies, bool throwOnCycle = true)
+        {
+            return source.TopologicalSort(x => getDependencies(x).ToList().GetEnumerator(), throwOnCycle);
         }
         
         public static IEnumerable<T> TopologicalSort<T>(this IEnumerable<T> source, Func<T, IEnumerator<T>> getDependencies, bool throwOnCycle = true)
