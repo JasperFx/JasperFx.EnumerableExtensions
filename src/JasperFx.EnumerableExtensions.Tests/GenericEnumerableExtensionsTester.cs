@@ -51,14 +51,7 @@ namespace JasperFx.EnumerableExtensions.Tests
 
             objects.FirstValue(x => x.Child).ShouldBeSameAs(theChild);
         }
-
-        [Fact]
-        public void join()
-        {
-            var list = new List<string>(new[] {"a", "b", "c"});
-            list.Join(", ").ShouldBe("a, b, c");
-        }
-
+        
         [Fact]
         public void add_many_and_range()
         {

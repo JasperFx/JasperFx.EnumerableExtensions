@@ -144,17 +144,6 @@ namespace JasperFx.EnumerableExtensions
         }
 
         /// <summary>
-        /// Concatenates a string between each item in a sequence of strings
-        /// </summary>
-        /// <param name="values"></param>
-        /// <param name="separator"></param>
-        /// <returns></returns>
-        public static string Join(this IEnumerable<string> values, string separator)
-        {
-            return Join(values.ToArray(), separator);
-        }
-
-        /// <summary>
         /// Performs an action with a counter for each item in a sequence and provides
         /// </summary>
         /// <typeparam name="T">The type of the items in the sequence</typeparam>
